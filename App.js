@@ -6,6 +6,7 @@ import {
   Button,
   Image,
   TouchableWithoutFeedback,
+  TouchableHighlight,
   TouchableOpacity,
   SafeAreaView,
 } from "react-native";
@@ -23,14 +24,14 @@ export default function App() {
         Velit commodo eu do
       </Text>
 
-      <TouchableOpacity onPress={() => console.log("Image tapped")}>
+      <TouchableHighlight onPress={() => console.log("Image tapped")}>
         <Image
           // blurRadius={5}
           fadeDuration={1000} //works only on android
           style={styles.logo}
           source={{ uri: "https://picsum.photos/200/300" }}
         />
-      </TouchableOpacity>
+      </TouchableHighlight>
     </SafeAreaView>
   );
 }
