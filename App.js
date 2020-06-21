@@ -8,6 +8,7 @@ import {
   TouchableWithoutFeedback,
   TouchableHighlight,
   TouchableOpacity,
+  TouchableNativeFeedback, //Only works for Android
   SafeAreaView,
 } from "react-native";
 
@@ -32,6 +33,7 @@ export default function App() {
           source={{ uri: "https://picsum.photos/200/300" }}
         />
       </TouchableHighlight>
+      <Button title="ClickMe" onPress={() => console.log("Tapped")} />
     </SafeAreaView>
   );
 }
