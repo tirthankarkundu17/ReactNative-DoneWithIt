@@ -4,21 +4,23 @@ import { StyleSheet, Text, View, Button, SafeAreaView } from "react-native";
 export default function App() {
   console.log("Welcome");
 
+  const handlePress = () => {
+    console.log("Clicked");
+  };
+
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Hello World!</Text>
-      <Button
-        onPress={onPressLearnMore}
-        title="Learn More"
-        color="#841584"
-        accessibilityLabel="Learn more about this purple button"
-      />
+      <Text numberOfLines={1} onPress={handlePress}>
+        Velit commodo eu do excepteur eiusmod enim culpa ullamco consequat.
+        Cillum pariatur cillum consequat ut commodo veniam aute velit officia
+        aute. Qui reprehenderit adipisicing proident esse commodo duis id
+        deserunt esse veniam. Fugiat amet cupidatat excepteur anim dolore
+        laborum do eu do qui eu elit. Irure consectetur eu consectetur amet
+        nulla Lorem eu cupidatat aliqua. Ullamco sit proident id ullamco. Nulla
+        id ut commodo fugiat nostrud minim.
+      </Text>
     </SafeAreaView>
   );
-
-  function onPressLearnMore() {
-    console.log("clicked");
-  }
 }
 
 const styles = StyleSheet.create({
