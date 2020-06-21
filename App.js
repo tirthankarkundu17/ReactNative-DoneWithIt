@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   TouchableNativeFeedback, //Only works for Android
   SafeAreaView,
+  Alert,
 } from "react-native";
 
 export default function App() {
@@ -25,15 +26,35 @@ export default function App() {
         Velit commodo eu do
       </Text>
 
-      <TouchableHighlight onPress={() => console.log("Image tapped")}>
+      <TouchableOpacity onPress={() => console.log("CK")}>
         <Image
           // blurRadius={5}
           fadeDuration={1000} //works only on android
           style={styles.logo}
           source={{ uri: "https://picsum.photos/200/300" }}
         />
-      </TouchableHighlight>
-      <Button title="ClickMe" onPress={() => console.log("Tapped")} />
+      </TouchableOpacity>
+
+      <Button
+        color="orange"
+        title="ClickMe"
+        onPress={() =>
+          Alert.alert("Title", "Tapped", [
+            {
+              text: "Yes",
+              onPress: () => {
+                console.log("yes");
+              },
+            },
+            {
+              text: "No",
+              onPress: () => {
+                console.log("no");
+              },
+            },
+          ])
+        }
+      />
     </SafeAreaView>
   );
 }
@@ -46,7 +67,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   logo: {
-    width: "200px",
-    height: "300px",
+    width: 200,
+    height: 200,
   },
 });
