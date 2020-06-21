@@ -11,6 +11,8 @@ import {
   TouchableNativeFeedback, //Only works for Android
   SafeAreaView,
   Alert,
+  Platform,
+  StatusBar,
 } from "react-native";
 
 export default function App() {
@@ -63,11 +65,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "white",
-    alignItems: "center",
-    justifyContent: "center",
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    // alignItems: "center",
+    // justifyContent: "center",
   },
   logo: {
-    width: 200,
-    height: 200,
+    width: "100%",
+    height: "50%",
   },
 });
