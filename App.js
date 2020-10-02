@@ -23,7 +23,9 @@ export default function App() {
         backgroundColor: "whitesmoke",
         flexDirection: "row", //direction of flex
         justifyContent: "center", //against the main axis or flexDirection
-        alignItems: "center", //against secondary axis default is stretch applied to container
+        alignItems: "center", //against secondary axis default is stretch applied to container within each line
+        alignContent: "center", // for whole works only with wrap
+        flexWrap: "wrap",
       }}
     >
       <View
@@ -31,7 +33,7 @@ export default function App() {
           width: 100,
           height: 100,
           backgroundColor: "dodgerblue",
-          alignSelf: "flex-start", //for individual element
+          // alignSelf: "flex-start", //for individual element
         }}
       />
       <View
@@ -46,6 +48,20 @@ export default function App() {
           width: 100,
           height: 100,
           backgroundColor: "tomato",
+        }}
+      />
+      <View
+        style={{
+          width: 100,
+          height: 100,
+          backgroundColor: "greenyellow",
+        }}
+      />
+      <View
+        style={{
+          width: 100,
+          height: 100,
+          backgroundColor: "yellow",
         }}
       />
     </View>
