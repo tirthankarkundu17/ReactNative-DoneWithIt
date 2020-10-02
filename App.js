@@ -21,6 +21,7 @@ export default function App() {
       style={{
         flex: 1,
         backgroundColor: "whitesmoke",
+        flexDirection: "row", //direction of flex
       }}
     >
       <View
