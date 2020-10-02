@@ -22,23 +22,28 @@ export default function App() {
         flex: 1,
         backgroundColor: "whitesmoke",
         flexDirection: "row", //direction of flex
+        justifyContent: "center", //against the main axis or flexDirection
+        alignItems: "center", //against secondary axis default is stretch
       }}
     >
       <View
         style={{
-          flex: 1,
+          width: 100,
+          height: 100,
           backgroundColor: "dodgerblue",
         }}
       />
       <View
         style={{
-          flex: 1,
+          width: 100,
+          height: 100,
           backgroundColor: "gold",
         }}
       />
       <View
         style={{
-          flex: 1,
+          width: 100,
+          height: 100,
           backgroundColor: "tomato",
         }}
       />
