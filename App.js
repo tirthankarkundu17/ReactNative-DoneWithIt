@@ -33,7 +33,7 @@ export default function App() {
           width: 100,
           height: 100,
           backgroundColor: "dodgerblue",
-          flexGrow: 1, //fill extra space
+          // flexGrow: 1, //fill extra space
           // flexShrink: 1, //fit others on overflow ..similar to flex : -1
           // alignSelf: "flex-start", //for individual element
         }}
@@ -43,6 +43,8 @@ export default function App() {
           width: 100,
           height: 100,
           backgroundColor: "gold",
+          top: 20,
+          position: "absolute", //default relative -- absolute will make changes in other views
           //flexBasis : 100 // means width or height based on flexdirection
         }}
       />
